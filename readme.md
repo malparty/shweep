@@ -2,6 +2,9 @@
 
 ## Keymaps
 
+The below Figma layout were made thanks to [@madhanparthasar](https://www.figma.com/@madhanparthasar)'s [Ortholinear Keyboard Keybinding Layout Tool
+](https://www.figma.com/community/file/1283154322826272613) 🙌
+
 ### Layers only
 
 <img src="images/layers.png" alt="Keymap to see all layers" />
