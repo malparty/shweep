@@ -1,4 +1,4 @@
-# qmk_xavv1 – 34 keys hybrid Layout & Combo
+# xavv1 – 34 keys hybrid Layout & Combo
 
 ## Keymaps
 
@@ -38,6 +38,12 @@ But you can explore some features and take the pieces you want.
 ### Tap Dance
 
 TODO: Add documentation on what it does to get the layer switch to work as I needed it to work.
+
+## Install
+
+Clone this repo in the folder :
+
+    ~/qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps/
 
 ## Compile and flash
 
