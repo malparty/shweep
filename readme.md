@@ -47,4 +47,6 @@ Clone this repo in the folder :
 
 ## Compile and flash
 
-Navigate into the keymap folder `keyboards/splitkb/aurora/sweep/keymaps/xavv1` and launch this command for both sides :
+Navigate into the keymap folder `keyboards/splitkb/aurora/sweep/keymaps/xavv1`.
+
+Compile with `qmk compile` and flash both sides with `qmk flash`.
