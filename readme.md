@@ -37,7 +37,29 @@ But you can explore some features and take the pieces you want.
 
 ### Tap Dance
 
-TODO: Add documentation on what it does to get the layer switch to work as I needed it to work.
+#### Thumbs layer switches
+
+The default QMK behavior was not working for me. Imagine you have a number layer, activated with a [Momentary layer switch "MO(layer)"](https://docs.qmk.fm/#/keycodes?id=layer-switching). Now you also have the "backspace" key on that same key.
+
+- Keep the key down, it momentarily switches to the layer
+- Release the key, it comes back to the root layer
+- Tap the key, it triggers a backspace
+
+This sounds all good. But now, you need to type a phone number quickly.
+Snap! You made a mistake with the numbers, let's lightning-fast `backspace` it and retype. Then reselect the layer.
+That's where QMK implementation of the `MO` switch was not OK to me. When you reselect the layer, if you are under the `TAPPING_TERM` (200ms) time since you tapped `backspace`, it will tap `backspace` again, even when stay pressed on the key ; and the layer would no activate either.
+
+This was quite frustrating to me. Especially that my ErgoDox EZ nailed this part.
+To solve this, I implemented the `features/tap_dance.c` part.
+
+### Arbitrations
+
+The backspace key cannot be pressed long to remove a chain of characters until it's released.
+I'm very happy about this "limitation" because it forced me to learn better ways to remove text:
+
+- use `CMD + backspace` to delete characters until the start of the line
+- use `OPT + backspace` to delete characters until the start of the word
+- use `SHIFT + arrows` to select the part of the text to remove (arrows allow for being triggered many times when kept pressed). This allows me to ensure the expected characters are selected before I press the backspace key – it's easier to fix a bad text selection than to `undo` a chain backspace with precision (generally the whole chain removal will be undo when you expect to only undo 1 or 2 characters)
 
 ## Install
 
