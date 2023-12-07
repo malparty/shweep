@@ -61,8 +61,11 @@ I'm very happy about this "limitation" because it forced me to learn better ways
 Add this repos as a git submodule inside the `qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps/` folder:
 
 ```
-cd qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps/
+cd qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps
 git submodule add https://github.com/malparty/xavv1.git
+cd ../../../../../
+make git-submodule
+cd keyboards/splitkb/aurora/sweep/keymaps/xavv1
 ```
 
 ## Compile and flash
