@@ -34,8 +34,8 @@ enum combos {
   COMBO_LPAR,
 
   COMBO_ESC,
-  COMBO_ENTER,
-  COMBO_BACKSPACE,
+  COMBO_QUOTE,
+  COMBO_DQUOTE,
   COMBO_CAPS,
 
   // Verticals
@@ -69,8 +69,8 @@ const uint16_t PROGMEM combo_c_cedi[] = {KC_C, MT(MOD_LSFT, KC_T), COMBO_END};
 
 // Horizontals
 const uint16_t PROGMEM combo_esc[] = {KC_W, KC_F, KC_P, COMBO_END};
-const uint16_t PROGMEM combo_enter[] = {MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T), COMBO_END};
-const uint16_t PROGMEM combo_backspace[] = {KC_X, KC_C, KC_D, COMBO_END};
+const uint16_t PROGMEM combo_quote[] = {MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T), COMBO_END};
+const uint16_t PROGMEM combo_dquote[] = {KC_X, KC_C, KC_D, COMBO_END};
 const uint16_t PROGMEM combo_caps[] = {KC_Z, MT(MOD_LGUI, KC_A), COMBO_END};
 
 const uint16_t PROGMEM combo_rbrc_sft[] = {KC_C, KC_D, COMBO_END};
@@ -111,8 +111,8 @@ combo_t key_combos[] = {
     [C_CEDI] = COMBO(combo_c_cedi, LOPT(KC_C)),
 
     [COMBO_ESC] = COMBO(combo_esc, KC_ESC),
-    [COMBO_ENTER] = COMBO(combo_enter, KC_ENT),
-    [COMBO_BACKSPACE] = COMBO(combo_backspace, KC_BSPC),
+    [COMBO_QUOTE] = COMBO(combo_quote, KC_QUOTE),
+    [COMBO_DQUOTE] = COMBO(combo_dquote, LSFT(KC_QUOTE)),
     [COMBO_CAPS] = COMBO(combo_caps, KC_CAPS),
 
     [LBRC_SFT] = COMBO(combo_lbrc_sft, LSFT(KC_LBRC)),
