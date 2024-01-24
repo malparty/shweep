@@ -6,7 +6,7 @@ char send_string_actions[][10] = {
 };
 
 char send_string_fast_actions[][20] = {
-    "xavier@nimble.hq",
+    "xavier@nimblehq.co",
     "xavier@malparty.fr",
     "Malparty",
     "Xavier",
@@ -144,9 +144,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                     SS_GTPF,  KC_TRNS,                      KC_TRNS, KC_TRNS
         ),
 	[_RGB] = LAYOUT(
-        RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,                        RGB_SPI, KC_NO, KC_NO, KC_NO, QK_BOOT,
-        RGB_M_P, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD,                       RGB_SPD, KC_NO, KC_NO, KC_NO, KC_NO,
-        RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN, RGB_M_K,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-                                    RGB_M_G, RGB_M_X,                       TO(_BASE), TO(_BASE)
+        RGB_TOG, RGB_MOD,  RGB_HUI, RGB_SAI, RGB_VAI,                       KC_NO, KC_NO, KC_NO, KC_NO, QK_BOOT,
+        RGB_SPI, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD,                       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        RGB_SPD, KC_NO,    KC_NO,   KC_NO,   KC_NO,                         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+                                    KC_NO,   KC_NO,                         TO(_BASE), TO(_BASE)
     )
 };
