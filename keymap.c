@@ -11,10 +11,9 @@ char send_string_fast_actions[][20] = {
     "Malparty",
     "Xavier",
     "",
+    "",
     "gttt ",
     "git push --force\n",
-    "bundle exec ",
-    "rake db:migrate",
     "Thanks :pray: ",
     "Nice catch! ",
     ":white_check_mark: ",
@@ -48,6 +47,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (keycode == SS_GITCM) {
         if (record->event.pressed) {
             SEND_STRING("git cm ''" SS_TAP(X_LEFT));
+        }
+            return false;
+    }
+    if (keycode == SS_GITCMSCI) {
+        if (record->event.pressed) {
+            SEND_STRING("git cm '[skip ci] '" SS_TAP(X_LEFT));
         }
             return false;
     }
@@ -139,9 +144,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
 	[_SENDSTR] = LAYOUT(
             SS_FNAME, SS_LNAME, SS_NC, SS_TX,   SS_GITCM,                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-            SS_MAILP, KC_TRNS, KC_TRNS, SS_CK,   SS_BUND,                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-            SS_MAILW, KC_TRNS, KC_TRNS, SS_HARO, SS_DBMI,                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                    SS_GTPF,  KC_TRNS,                      KC_TRNS, KC_TRNS
+            SS_MAILP, KC_NO,    KC_NO, SS_CK,   SS_GITCMSCI,                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+            SS_MAILW, KC_NO,    KC_NO, SS_HARO, KC_NO,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                                    SS_GTPF,    KC_NO,                      KC_TRNS, KC_TRNS
         ),
 	[_RGB] = LAYOUT(
         RGB_TOG, RGB_MOD,  RGB_HUI, RGB_SAI, RGB_VAI,                       KC_NO, KC_NO, KC_NO, KC_NO, QK_BOOT,
