@@ -47,6 +47,16 @@ That's where QMK implementation of the `MO` switch was not OK to me. When you re
 This was quite frustrating to me. Especially that my ErgoDox EZ nailed this part.
 To solve this, I implemented the `features/tap_dance.c` part.
 
+### Refinements
+
+- `#define QUICK_TAP_TERM 0` disable the `QUICK_TAP_TERM`.
+  This allows double-tapping a modifier key (and holding it on the second tap) and getting the hold action triggered.
+  In the context of this keyboard, a simple example is
+  "you tipped a wrong number, correct it with `tap BCKSP` then `hold BCKSP` (NUM LAYER) then your number.
+  The double `BACKSP` requires activating the layer, not to switch to `QUICK_TAP_TERM` and repeat your backspace.
+- This layout CANNOT use `#define HOLD_ON_OTHER_KEY_PRESS` due to the home-row modifier:
+  this feature allows modifiers to trigger faster but prevents from rolling the home-row keys.
+
 ### Arbitrations
 
 The backspace key cannot be pressed long to remove a chain of characters until it's released.
