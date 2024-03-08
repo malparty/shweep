@@ -52,16 +52,7 @@ void tap_dance_tap_hold_reset(tap_dance_state_t *state, void *user_data) {
 #define ACTION_TAP_DANCE_TAP_HOLD(tap, hold) \
     { .fn = {NULL, tap_dance_tap_hold_finished, tap_dance_tap_hold_reset}, .user_data = (void *)&((tap_dance_tap_hold_layer_t){tap, hold, 0}), }
 
-#define ACTION_TAP_DANCE_TAP_HOLD_LAYER(tap, hold) \
-    { .fn = {NULL, tap_dance_tap_hold_layer_finished, tap_dance_tap_hold_layer_reset}, .user_data = (void *)&((tap_dance_tap_hold_layer_t){tap, hold, 0}), }
-
 tap_dance_action_t tap_dance_actions[] = {
-    [TD_TAB_MOUSE] = ACTION_TAP_DANCE_TAP_HOLD_LAYER(KC_TAB, _MOUSE),
-    [TD_SPC_NAV] = ACTION_TAP_DANCE_TAP_HOLD_LAYER(KC_SPC, _NAV),
-    [TD_BSP_NUM] = ACTION_TAP_DANCE_TAP_HOLD_LAYER(KC_BSPC, _NUM),
-    [TD_ENT_SYM] = ACTION_TAP_DANCE_TAP_HOLD_LAYER(KC_ENTER, _SYM),
-    [TD_QUOTE_SENDS] = ACTION_TAP_DANCE_TAP_HOLD_LAYER(KC_QUOTE, _SENDSTR),
-
     [TD_BROWSER] = ACTION_TAP_DANCE_TAP_HOLD(LGUI(KC_3), LGUI(KC_6)),
     [TD_GITFIGMA] = ACTION_TAP_DANCE_TAP_HOLD(LGUI(KC_2), LGUI(KC_5)),
     [TD_RECTANGLE] = ACTION_TAP_DANCE_TAP_HOLD(LGUI(LOPT(LCTL(KC_LEFT))), LOPT(LCTL(KC_ENT))),

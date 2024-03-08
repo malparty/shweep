@@ -32,9 +32,13 @@ enum custom_keys {
         SS_HARO,
 
         SS_A_GRAVE,
+        SS_A_CIRCUMFLEX,
         SS_E_GRAVE,
         SS_E_AIGU,
         SS_E_CIRCUMFLEX,
+        SS_I_CIRCUMFLEX,
+        SS_O_CIRCUMFLEX,
+        SS_U_CIRCUMFLEX,
         SS_U_GRAVE,
         SS_C_CEDI,
     SS_END,

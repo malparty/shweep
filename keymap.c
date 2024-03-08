@@ -80,9 +80,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         return false;
     }
+    else if (keycode == SS_A_CIRCUMFLEX) {
+        if (record->event.pressed) {
+            SEND_STRING(SS_LOPT("i") "a");
+        }
+        return false;
+    }
     else if (keycode == SS_E_CIRCUMFLEX) {
         if (record->event.pressed) {
             SEND_STRING(SS_LOPT("i") "e");
+        }
+        return false;
+    }
+    else if (keycode == SS_I_CIRCUMFLEX) {
+        if (record->event.pressed) {
+            SEND_STRING(SS_LOPT("i") "i");
+        }
+        return false;
+    }
+    else if (keycode == SS_U_CIRCUMFLEX) {
+        if (record->event.pressed) {
+            SEND_STRING(SS_LOPT("i") "u");
+        }
+        return false;
+    }
+    else if (keycode == SS_O_CIRCUMFLEX) {
+        if (record->event.pressed) {
+            SEND_STRING(SS_LOPT("i") "o");
         }
         return false;
     }
@@ -108,14 +132,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT(
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
-             KC_Q        ,       KC_W       ,       KC_F       ,       KC_P       ,      KC_B       ,           KC_J       ,      KC_L        ,       KC_U       ,       KC_Y       ,TD(TD_QUOTE_SENDS),
+             KC_Q        ,       KC_W       ,       KC_F       ,       KC_P       ,      KC_B       ,           KC_J       ,      KC_L        ,       KC_U       ,       KC_Y       ,LT(_SENDSTR, KC_CAPS),
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
        MT(MOD_LGUI, KC_A),MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),      KC_G       ,           KC_M       ,MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_RALT, KC_I),MT(MOD_RGUI, KC_O),
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
               KC_Z       ,       KC_X       ,       KC_C       ,       KC_D       ,       KC_V      ,           KC_K       ,      KC_H        ,     KC_COMM      ,      KC_DOT      ,LT(_RGB, KC_SLSH) ,
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
     //                                           |-------------------------+-------------------------| |-------------------------+-------------------------|
-                                                       TD(TD_TAB_MOUSE)    ,      TD(TD_SPC_NAV)     ,     TD(TD_BSP_NUM)        ,      TD(TD_ENT_SYM)
+                                                       LT(_MOUSE, KC_TAB)  ,        LT(_NAV, KC_SPC) ,     LT(_NUM, KC_BSPC)     ,    LT(_SYM, KC_ENTER)
     //                                           |-------------------------+-------------------------| |-------------------------+-------------------------|
     ),
 	[_MOUSE] = LAYOUT(
