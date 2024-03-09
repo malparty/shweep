@@ -5,7 +5,7 @@
 _Figma layout made thanks to [@madhanparthasar](https://www.figma.com/@madhanparthasar)'s [Ortholinear Keyboard Keybinding Layout Tool
 ](https://www.figma.com/community/file/1283154322826272613)_ 🙌
 
-<img src="images/combos.png" alt="Keymap to see all layers and combos" />
+<img src="images/keymap.png" alt="Keymap to see all layers and combos" />
 
 ## Origins
 
@@ -26,26 +26,20 @@ It's not a surprise that this keymap is a hybrid. It was inspired by 2 opposite 
 
 The QMK code is inspired by the [sweep_keymap from flinguenheld](https://github.com/flinguenheld/sweep_keymap).
 
-> [!IMPORTANT]
-> My code is probably NOT clean, I would NOT recommend using it as a starting point to create a brand new keymap.
-> But you can explore some features and take the pieces you want.
-
 ### Tap Dance
 
-#### Thumbs layer switches
+#### Apps shortcuts doubled with long-tap
 
-The default QMK behavior was not working for me. Imagine you have a number layer, activated with a [Momentary layer switch "MO(layer)"](https://docs.qmk.fm/#/keycodes?id=layer-switching). Now you also have the "backspace" key on that same key.
+You'll find some tap-dance actions on the `_MOUSE` layer. For example: `TD(TD_BROWSER)`.
+This allows the keyboard to respond to 2 different events: normal tap and long tap (down until the tapping term, then up).
 
-- Keep the key down, it momentarily switches to the layer
-- Release the key, it comes back to the root layer
-- Tap the key, it triggers a backspace
+I use that for:
 
-This sounds all good. But now, you need to type a phone number quickly.
-Snap! You made a mistake with the numbers, let's lightning-fast `backspace` it and retype. Then reselect the layer.
-That's where QMK implementation of the `MO` switch was not OK to me. When you reselect the layer, if you are under the `TAPPING_TERM` (200ms) time since you tapped `backspace`, it will tap `backspace` again, even when stay pressed on the key; and the layer would no activate either.
+- Browser: short tap is working/codding (Chrome) / long tap is personal browser (Brave).
+- GitHub App / Figma App: as Figma is less used, it is mapped to the long tap.
+- Rectangle (windows management for Mac): a normal tap moves the windows on another screen and a long tap makes the window full-screen.
 
-This was quite frustrating to me. Especially that my ErgoDox EZ nailed this part.
-To solve this, I implemented the `features/tap_dance.c` part.
+See `features/tap_dance.c` for the implementation.
 
 ### Refinements
 
@@ -70,7 +64,7 @@ I'm very happy about this "limitation" because it forced me to learn better ways
 
 Add this repos as a git submodule inside the `qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps/` folder:
 
-```
+```shell
 cd qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps
 git submodule add https://github.com/malparty/xavv1.git
 cd ../../../../../
