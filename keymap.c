@@ -21,6 +21,19 @@ char send_string_fast_actions[][20] = {
     "è",
 };
 
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    if (host_keyboard_led_state().caps_lock) {
+        for (uint8_t i = led_min; i < led_max; i++) {
+            if (i%2 == 0) {
+                rgb_matrix_set_color(i, RGB_RED);
+            } else {
+                rgb_matrix_set_color(i, RGB_BLUE);
+            }
+        }
+    }
+    return false;
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // TAP DANCE
     tap_dance_action_t *action;

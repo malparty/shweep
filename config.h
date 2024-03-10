@@ -23,6 +23,9 @@
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_RAINBOW_BEACON
 
+/* Sync CAPS LOCK info to both halves (for LED effect) */
+#define SPLIT_LED_STATE_ENABLE
+
 /* Mouse */
 // The default is 100
 #define MOUSEKEY_WHEEL_INTERVAL 50
