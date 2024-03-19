@@ -10,15 +10,14 @@ char send_string_fast_actions[][20] = {
     "xavier@malparty.fr",
     "Malparty",
     "Xavier",
-    "",
-    "",
     "gttt ",
     "git push --force\n",
     "Thanks :pray: ",
     "Nice catch! ",
     ":white_check_mark: ",
     ":harold: ",
-    "è",
+    "the",
+    "and",
 };
 
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {

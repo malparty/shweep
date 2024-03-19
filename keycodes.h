@@ -18,18 +18,24 @@ enum custom_keys {
     SS_SLOW_START = QK_KB_0, // might conflict with MOD TAP!!!
         SS_WQ,
     SS_FAST_START,
+        // Matching table `send_string_fast_actions`
         SS_MAILW,
         SS_MAILP,
         SS_LNAME,
         SS_FNAME,
-        SS_GITCM,
-        SS_GITCMSCI,
         SS_GITTT,
         SS_GTPF,
         SS_TX,
         SS_NC,
         SS_CK,
         SS_HARO,
+
+        SS_THE,
+        SS_AND,
+
+        // NOT in the base table `send_string_fast_actions`
+        SS_GITCM,
+        SS_GITCMSCI,
 
         SS_A_GRAVE,
         SS_A_CIRCUMFLEX,

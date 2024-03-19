@@ -52,6 +52,9 @@ enum combos {
   COMBO_TILDE,
   COMBO_BCKSLASH,
 
+  COMBO_THE,
+  COMBO_AND,
+
   /* Just to replace the define in config.h */
   COMBO_LENGTH,
 };
@@ -99,6 +102,8 @@ const uint16_t PROGMEM combo_col[] = {MT(MOD_RSFT, KC_N), MT(MOD_RCTL, KC_E), MT
 const uint16_t PROGMEM combo_tilde[] = {MT(MOD_RALT, KC_I), KC_Y, COMBO_END};
 const uint16_t PROGMEM combo_pipe[] = {MT(MOD_RSFT, KC_N), KC_L, COMBO_END};
 const uint16_t PROGMEM combo_bckslash[] = {MT(MOD_RSFT, KC_N), KC_H, COMBO_END};
+const uint16_t PROGMEM combo_the[] = {KC_X, KC_D, COMBO_END};
+const uint16_t PROGMEM combo_and[] = {KC_H, KC_DOT, COMBO_END};
 
 /* Sequences fo keys */
 combo_t key_combos[] = {
@@ -138,4 +143,7 @@ combo_t key_combos[] = {
     [COMBO_SEMICOL] = COMBO(combo_semicol, KC_SCLN),
     [COMBO_TILDE] = COMBO(combo_tilde, KC_TILD),
     [COMBO_BCKSLASH] = COMBO(combo_bckslash, KC_BSLS),
+
+    [COMBO_THE] = COMBO(combo_the, SS_THE),
+    [COMBO_AND] = COMBO(combo_and, SS_AND),
 };
