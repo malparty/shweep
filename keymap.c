@@ -144,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT(
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
-             KC_Q        ,       KC_W       ,       KC_F       ,       KC_P       ,      KC_B       ,           KC_J       ,      KC_L        ,       KC_U       ,       KC_Y       ,LT(_SENDSTR, KC_CAPS),
+                     KC_ESC,    KC_W       ,       KC_F       ,       KC_P       ,      KC_B       ,           KC_J       ,      KC_L        ,       KC_U       ,       KC_Y       ,LT(_SENDSTR, KC_Q),
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
        MT(MOD_LGUI, KC_A),MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),      KC_G       ,           KC_M       ,MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_RALT, KC_I),MT(MOD_RGUI, KC_O),
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
@@ -173,7 +173,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 KC_0, KC_DOT,                               KC_TRNS, KC_NO
         ),
 	[_SYM] = LAYOUT(
-            KC_LCBR, KC_AMPR, KC_ASTR, KC_MINS, KC_RCBR,                    KC_NO, KC_UNDS, KC_NO, KC_NO, KC_TRNS,
+            KC_LCBR, KC_AMPR, KC_ASTR, KC_MINS, KC_RCBR,                    KC_NO, KC_NO,   KC_NO, KC_NO, KC_TRNS,
             KC_COLN, KC_DLR, KC_PERC, KC_CIRC, KC_PLUS,                     KC_NO, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
             KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_PIPE,                      KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,
                                      KC_LPRN, KC_RPRN,                      KC_NO, KC_TRNS

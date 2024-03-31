@@ -36,7 +36,7 @@ enum combos {
   COMBO_RPAR,
   COMBO_LPAR,
 
-  COMBO_ESC,
+  COMBO_CAPS,
   COMBO_QUOTE,
   COMBO_DQUOTE,
   COMBO_BQUOT,
@@ -73,7 +73,7 @@ const uint16_t PROGMEM combo_u_grave[] = {KC_U, MT(MOD_RALT, KC_I), COMBO_END};
 const uint16_t PROGMEM combo_o_circumflex[] = {MT(MOD_RGUI, KC_O), LT(_RGB, KC_SLSH), COMBO_END};
 const uint16_t PROGMEM combo_c_cedi[] = {KC_C, MT(MOD_LSFT, KC_T), COMBO_END};
 
-const uint16_t PROGMEM combo_esc[] = {KC_W, KC_F, KC_P, COMBO_END};
+const uint16_t PROGMEM combo_caps[] = {KC_W, KC_F, KC_P, COMBO_END};
 
 /* ' " ` */
 const uint16_t PROGMEM combo_quote[] = {MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T), COMBO_END};
@@ -118,7 +118,7 @@ combo_t key_combos[] = {
     [O_CIRCUMFLEX] = COMBO(combo_o_circumflex, SS_O_CIRCUMFLEX),
     [C_CEDI] = COMBO(combo_c_cedi, LOPT(KC_C)),
 
-    [COMBO_ESC] = COMBO(combo_esc, KC_ESC),
+    [COMBO_CAPS] = COMBO(combo_caps, KC_CAPS),
     [COMBO_QUOTE] = COMBO(combo_quote, KC_QUOTE),
     [COMBO_DQUOTE] = COMBO(combo_dquote, LSFT(KC_QUOTE)),
 
