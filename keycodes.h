@@ -6,6 +6,7 @@
 enum custom_layers {
     _BASE,
     _MOUSE,
+    _MOUSE2,
     _NAV,
     _NUM,
     _SYM,

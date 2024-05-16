@@ -144,11 +144,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_BASE] = LAYOUT(
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
-                     KC_ESC,    KC_W       ,       KC_F       ,       KC_P       ,      KC_B       ,           KC_J       ,      KC_L        ,       KC_U       ,       KC_Y       ,LT(_SENDSTR, KC_Q),
+                     KC_ESC,    KC_W        ,       KC_F       ,       KC_P       ,      KC_B       ,           KC_J       ,      KC_L        ,       KC_U       ,       KC_Y       ,LT(_SENDSTR, KC_Q),
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
        MT(MOD_LGUI, KC_A),MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),      KC_G       ,           KC_M       ,MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_RALT, KC_I),MT(MOD_RGUI, KC_O),
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
-              KC_Z       ,       KC_X       ,       KC_C       ,       KC_D       ,       KC_V      ,           KC_K       ,      KC_H        ,     KC_COMM      ,      KC_DOT      ,LT(_RGB, KC_SLSH) ,
+         LT(_MOUSE2, KC_Z),     KC_X        ,       KC_C       ,       KC_D       ,       KC_V      ,           KC_K       ,      KC_H        ,     KC_COMM      ,      KC_DOT      ,LT(_RGB, KC_SLSH) ,
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
     //                                           |-------------------------+-------------------------| |-------------------------+-------------------------|
                                                        LT(_MOUSE, KC_TAB)  ,        LT(_NAV, KC_SPC) ,     LT(_NUM, KC_BSPC)     ,    LT(_SYM, KC_ENTER)
@@ -158,6 +158,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             TD(TD_GITFIGMA), TD(TD_BROWSER), LGUI(KC_1), LGUI(KC_7), LGUI(KC_4),        KC_NO,     KC_NO,      KC_NO,      KC_NO,      KC_NO,
             KC_LGUI,         KC_LOPT,        KC_LCTL,    KC_LSFT,    LGUI(LSFT(KC_E)),  KC_NO,     KC_MS_L,    KC_MS_D,    KC_MS_U,    KC_MS_R,
             KC_LEFT,         KC_UP,          KC_DOWN,    KC_RGHT,    TD(TD_RECTANGLE),  KC_BTN3,   KC_WH_L,    KC_WH_U,    KC_WH_D,    KC_WH_R,
+                                                         KC_TRNS,    KC_NO,             KC_BTN2,   KC_BTN1
+        ),
+	[_MOUSE2] = LAYOUT(
+            KC_NO,           KC_NO,          KC_NO,      KC_NO,      KC_NO,             KC_NO,     KC_NO,      KC_NO,      KC_NO,      KC_NO,
+            KC_LGUI,         KC_LOPT,        KC_LCTL,    KC_LSFT,    KC_NO,             KC_NO,     KC_NO,      KC_NO,      KC_NO,      KC_NO,
+            KC_TRNS,         KC_BTN4,        KC_BTN2,    KC_BTN1,    KC_NO,             KC_NO,     KC_NO,      KC_NO,      KC_NO,      KC_NO,
                                                          KC_TRNS,    KC_NO,             KC_BTN2,   KC_BTN1
         ),
 	[_NAV] = LAYOUT(
