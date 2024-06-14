@@ -179,7 +179,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 KC_0, KC_DOT,                               KC_TRNS, KC_NO
         ),
 	[_SYM] = LAYOUT(
-            KC_LCBR, KC_AMPR, KC_ASTR, KC_MINS, KC_RCBR,                    KC_NO, KC_NO,   KC_NO, KC_NO, KC_TRNS,
+            KC_LCBR, KC_AMPR, KC_ASTR, KC_MINS, KC_RCBR,                    KC_NO, KC_NO,   KC_NO, KC_NO, TO(_GAME),
             KC_COLN, KC_DLR, KC_PERC, KC_CIRC, KC_PLUS,                     KC_NO, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
             KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_PIPE,                      KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,
                                      KC_LPRN, KC_RPRN,                      KC_NO, KC_TRNS
@@ -195,5 +195,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RGB_SPI, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD,                       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         RGB_SPD, KC_NO,    KC_NO,   KC_NO,   KC_NO,                         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
                                     KC_NO,   KC_NO,                         TO(_BASE), TO(_BASE)
+    ),
+    [_GAME] = LAYOUT(
+    //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
+                     KC_Q,    KC_W          ,       KC_E       ,       KC_R       ,      KC_T       ,           KC_9       ,      KC_P        ,       KC_U       ,       KC_Y       ,    TO(_BASE)     ,
+    //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
+                     KC_A,    KC_S          ,       KC_D        ,      KC_F       ,      KC_G       ,           KC_4       ,      KC_5        ,       KC_6       ,       KC_7       ,     KC_8         ,
+    //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
+                     KC_Z,    KC_X          ,       KC_C       ,       KC_V       ,       KC_B      ,           KC_2       ,      KC_3        ,     KC_COMM      ,      KC_DOT      ,     KC_SLSH      ,
+    //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
+    //                                           |-------------------------+-------------------------| |-------------------------+-------------------------|
+                                                         KC_L              ,        KC_N             ,         KC_0          ,    KC_1
+    //                                           |-------------------------+-------------------------| |-------------------------+-------------------------|
     )
 };
