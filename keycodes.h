@@ -13,6 +13,7 @@ enum custom_layers {
     _SENDSTR,
     _RGB,
     _GAME,
+    _WIN,
 };
 
 enum custom_keys {
