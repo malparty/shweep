@@ -64,7 +64,7 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 /* Sequences fo keys */
 /* Diacritics */
 const uint16_t PROGMEM combo_a_grave[] = {MT(MOD_LGUI, KC_A), KC_X, COMBO_END};
-const uint16_t PROGMEM combo_a_circumflex[] = {MT(MOD_LGUI, KC_A), KC_Z, COMBO_END};
+const uint16_t PROGMEM combo_a_circumflex[] = {MT(MOD_LGUI, KC_A), LT(_MOUSE2, KC_Z), COMBO_END};
 const uint16_t PROGMEM combo_e_grave[] = {MT(MOD_RCTL, KC_E), KC_DOT, COMBO_END};
 const uint16_t PROGMEM combo_e_aigu[] = {MT(MOD_RCTL, KC_E), KC_Y, COMBO_END};
 const uint16_t PROGMEM combo_e_circumflex[] = {MT(MOD_RCTL, KC_E), KC_COMM, COMBO_END};
