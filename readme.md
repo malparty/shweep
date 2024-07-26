@@ -1,4 +1,6 @@
-# xavv1 – 34 keys hybrid Layout & Combo
+# 🧹🐑 Shweep – 34 keys QMK Layout
+
+_...for the Aurora Sweep using both Layers & Combos!_
 
 ## Keymap
 
@@ -66,14 +68,14 @@ Add this repos as a git submodule inside the `qmk_firmware/keyboards/splitkb/aur
 
 ```shell
 cd qmk_firmware/keyboards/splitkb/aurora/sweep/keymaps
-git submodule add https://github.com/malparty/xavv1.git
+git submodule add https://github.com/malparty/shweep.git
 cd ../../../../../
 make git-submodule
-cd keyboards/splitkb/aurora/sweep/keymaps/xavv1
+cd keyboards/splitkb/aurora/sweep/keymaps/shweep
 ```
 
 ## Compile and flash
 
-Navigate into the keymap folder `keyboards/splitkb/aurora/sweep/keymaps/xavv1`.
+Navigate into the keymap folder `keyboards/splitkb/aurora/sweep/keymaps/shweep`.
 
 Compile with `qmk compile` and flash both sides with `qmk flash`.
