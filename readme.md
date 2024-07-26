@@ -7,7 +7,7 @@ _...for the Aurora Sweep using both Layers & Combos!_
 _Figma layout made thanks to [@madhanparthasar](https://www.figma.com/@madhanparthasar)'s [Ortholinear Keyboard Keybinding Layout Tool
 ](https://www.figma.com/community/file/1283154322826272613)_ 🙌
 
-<img src="images/keymap.png" alt="Keymap to see all layers and combos" />
+<img src="images/keymap.png" alt="The Shweep's keymap!" />
 
 ## Origins
 
