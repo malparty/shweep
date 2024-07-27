@@ -32,12 +32,14 @@ The QMK code is inspired by the [sweep_keymap from flinguenheld](https://github.
 
 Using a trackball/trackpad feels excellent for many gestures. But when it's time to click, you'll find your pointer movement affected by the click action!
 
-With a trackpad, you must either bring your hand off the pad and click or you must add pressure to the pad, thus moving the cursor (you click and lose precision!).
+- With a trackpad, you must either bring your hand off the pad and click or you must add pressure to the pad, thus moving the cursor (you click and lose precision!).
 - With  a trackball: pressing the click while your hand is on the ball will make your cursor move slightly, reducing the precision of the click.
 
 A good way to resolve these issues is to click with the left hand—i.e., control your cursor with two hands!
 
 ![image](https://github.com/user-attachments/assets/91d33f9e-1957-4b40-91c3-f2425f92d121)
+
+_That's a [Ploopy Adept](https://ploopy.co/adept-trackball/) in case you are wondering!_
 
 While holding `Z` with your pinky, you activate the momentary mouse layer:
 
