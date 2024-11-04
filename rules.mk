@@ -1,7 +1,6 @@
 LTO_ENABLE = yes
 CONVERT_TO = elite_pi
 
-SRC += features/tap_dance.c
 INTROSPECTION_KEYMAP_C += features/combo.c # Replace SRC, see issue #21137
 
 OLED_ENABLE = no
