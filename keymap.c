@@ -207,7 +207,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
        MT(MOD_LGUI, KC_A),MT(MOD_LALT, KC_R),MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),      KC_G       ,           KC_M       ,MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),MT(MOD_RALT, KC_I),MT(MOD_RGUI, KC_O),
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
-         LT(_MOUSE2, KC_Z),     KC_X        ,       KC_C       ,       KC_D       ,       KC_V      ,           KC_K       ,      KC_H        ,     KC_COMM      ,      KC_DOT      ,LT(_RGB, KC_SLSH) ,
+         LT(_MOUSE2, KC_Z),     KC_X        ,       KC_C       ,       KC_D       ,       KC_V      ,      LT(_RGB, KC_K)  ,      KC_H        ,     KC_COMM      ,      KC_DOT      ,LT(_MOUSE2, KC_SLSH) ,
     //|------------------+------------------+------------------+------------------+-----------------|   |------------------+------------------+------------------+------------------+------------------|
     //                                           |-------------------------+-------------------------| |-------------------------+-------------------------|
                                                        LT(_MOUSE, KC_TAB)  ,        LT(_NAV, KC_SPC) ,     LT(_NUM, KC_BSPC)     ,    LT(_SYM, KC_ENTER)
@@ -231,8 +231,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
 	[_MOUSE2] = LAYOUT(
             KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
-            KC_LGUI, KC_LOPT, KC_LCTL, KC_LSFT, KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
-            KC_TRNS, KC_BTN4, KC_BTN2, KC_BTN1, KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
+            KC_LGUI, KC_LOPT, KC_LCTL, KC_LSFT, KC_NO,      KC_NO,   KC_LSFT, KC_LCTL, KC_LOPT, KC_LGUI,
+            KC_TRNS, KC_BTN4, KC_BTN2, KC_BTN1, KC_NO,      KC_NO,   KC_BTN1, KC_BTN2, KC_BTN4, KC_TRNS,
                                        KC_TRNS, KC_NO,      KC_BTN2, KC_BTN1
         ),
 	[_NAV] = LAYOUT(
