@@ -106,4 +106,5 @@ cd keyboards/splitkb/aurora/sweep/keymaps/shweep
 
 Navigate into the keymap folder `keyboards/splitkb/aurora/sweep/keymaps/shweep`.
 
-Compile with `qmk compile` and flash both sides with `qmk flash`.
+Compile with `qmk compile -c -kb splitkb/aurora/sweep -km shweep`.
+Flash both sides with `qmk flash -c -kb splitkb/aurora/sweep -km shweep`.
