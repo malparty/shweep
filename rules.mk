@@ -3,6 +3,8 @@ CONVERT_TO = elite_pi
 
 INTROSPECTION_KEYMAP_C += features/combo.c # Replace SRC, see issue #21137
 
+REPEAT_KEY_ENABLE = yes
+
 OLED_ENABLE = no
 # OLED_DRIVER = SSD1306
 
