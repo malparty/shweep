@@ -1,6 +1,44 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
+
+enum custom_keys {
+    // SEND STRINGS
+    SS_SLOW_START = QK_KB_0, // might conflict with MOD TAP!!!
+        SS_WQ,
+    SS_FAST_START,
+        // Matching table `send_string_fast_actions`
+        SS_MAILW,
+        SS_MAILP,
+        SS_LNAME,
+        SS_FNAME,
+        SS_GITTT,
+        SS_GTPF,
+        SS_TX,
+        SS_NC,
+        SS_CK,
+        SS_HARO,
+
+        SS_THE,
+        SS_AND,
+
+        // NOT in the base table `send_string_fast_actions`
+        SS_GITCM,
+        SS_GITCMSCI,
+
+        SS_A_GRAVE,
+        SS_A_CIRCUMFLEX,
+        SS_E_GRAVE,
+        SS_E_AIGU,
+        SS_E_CIRCUMFLEX,
+        SS_I_CIRCUMFLEX,
+        SS_O_CIRCUMFLEX,
+        SS_U_CIRCUMFLEX,
+        SS_U_GRAVE,
+        SS_C_CEDI,
+    SS_END,
+};
+
 // Tap Dance
 void tap_dance_tap_hold_layer_finished(tap_dance_state_t *state, void *user_data) {
     tap_dance_tap_hold_layer_t *tap_hold = (tap_dance_tap_hold_layer_t *)user_data;
@@ -225,15 +263,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 	[_MOUSE] = LAYOUT(
             TD(TD_GITFIGMA), TD(TD_BROWSER), LGUI(KC_1), LGUI(KC_7), LGUI(KC_4),        KC_NO,     KC_NO,      KC_NO,      KC_NO,      KC_NO,
-            KC_LGUI,         KC_LOPT,        KC_LCTL,    KC_LSFT,    LGUI(LSFT(KC_E)),  KC_NO,     KC_MS_L,    KC_MS_D,    KC_MS_U,    KC_MS_R,
-            KC_LEFT,         KC_UP,          KC_DOWN,    KC_RGHT,    TD(TD_RECTANGLE),  KC_BTN3,   KC_WH_L,    KC_WH_U,    KC_WH_D,    KC_WH_R,
-                                                         KC_TRNS,    KC_NO,             KC_BTN2,   KC_BTN1
+            KC_LGUI,         KC_LOPT,        KC_LCTL,    KC_LSFT,    LGUI(LSFT(KC_E)),  KC_NO,     MS_LEFT,    MS_DOWN,    MS_UP,      MS_RGHT,
+            KC_LEFT,         KC_UP,          KC_DOWN,    KC_RGHT,    TD(TD_RECTANGLE),  MS_BTN3,   MS_WHLL,    MS_WHLU,    MS_WHLD,    MS_WHLR,
+                                                         KC_TRNS,    KC_NO,             MS_BTN2,   MS_BTN1
         ),
 	[_MOUSE2] = LAYOUT(
             KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
             KC_LGUI, KC_LOPT, KC_LCTL, KC_LSFT, KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
-            KC_TRNS, KC_BTN4, KC_BTN2, KC_BTN1, KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
-                                       KC_TRNS, KC_NO,      KC_BTN2, KC_BTN1
+            KC_TRNS, MS_BTN4, MS_BTN2, MS_BTN1, KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
+                                       KC_TRNS, KC_NO,      MS_BTN2, MS_BTN1
         ),
 	[_NAV] = LAYOUT(
         LGUI(KC_Z), LGUI(KC_X), LGUI(KC_C), LGUI(KC_V), RSG(KC_Z),      KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,
@@ -266,9 +304,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                     SS_GTPF,    KC_NO,                  KC_TRNS, KC_TRNS
         ),
 	[_RGB] = LAYOUT(
-        RGB_TOG, RGB_MOD,  RGB_HUI, RGB_SAI, RGB_VAI,                   KC_NO, KC_NO, KC_NO, KC_NO, QK_BOOT,
-        RGB_SPI, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD,                   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        RGB_SPD, KC_NO,    KC_NO,   KC_NO,   KC_NO,                     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        RM_TOGG, RM_NEXT,  RM_HUEU, RM_SATU, RM_VALU,                   KC_NO, KC_NO, KC_NO, KC_NO, QK_BOOT,
+        RM_SPDU, RM_PREV, RM_HUED, RM_SATD, RM_VALD,                   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        RM_SPDD, KC_NO,    KC_NO,   KC_NO,   KC_NO,                     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
                                     KC_NO,   KC_NO,                     TO(_BASE), TO(_BASE)
     ),
     [_GAME] = LAYOUT(
