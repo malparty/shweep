@@ -103,7 +103,7 @@ char send_string_actions[][10] = {
 };
 
 char send_string_fast_actions[][20] = {
-    "xavier@nimblehq.co",
+    "xavv1m@gmail.com",
     "xavier@malparty.fr",
     "Malparty",
     "Xavier",
@@ -167,55 +167,61 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     else if (keycode == SS_E_GRAVE) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("`") "e");
+            SEND_STRING(SS_TAP(X_CAPS) "`e");
         }
         return false;
     }
     else if (keycode == SS_A_GRAVE) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("`") "a");
+            SEND_STRING(SS_TAP(X_CAPS) "`a");
         }
         return false;
     }
     else if (keycode == SS_U_GRAVE) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("`") "u");
+            SEND_STRING(SS_TAP(X_CAPS) "`u");
         }
         return false;
     }
     else if (keycode == SS_E_AIGU) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("e") "e");
+            SEND_STRING(SS_TAP(X_CAPS) "'e");
         }
         return false;
     }
     else if (keycode == SS_A_CIRCUMFLEX) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("i") "a");
+            SEND_STRING(SS_TAP(X_CAPS) "^a");
         }
         return false;
     }
     else if (keycode == SS_E_CIRCUMFLEX) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("i") "e");
+            SEND_STRING(SS_TAP(X_CAPS) "^e");
         }
         return false;
     }
     else if (keycode == SS_I_CIRCUMFLEX) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("i") "i");
+            SEND_STRING(SS_TAP(X_CAPS) "^i");
         }
         return false;
     }
     else if (keycode == SS_U_CIRCUMFLEX) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("i") "u");
+            SEND_STRING(SS_TAP(X_CAPS) "^u");
         }
         return false;
     }
     else if (keycode == SS_O_CIRCUMFLEX) {
         if (record->event.pressed) {
-            SEND_STRING(SS_LOPT("i") "o");
+            SEND_STRING(SS_TAP(X_CAPS) "^o");
+        }
+        return false;
+    }
+    else if (keycode == SS_C_CEDI) {
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_CAPS) ",c");
         }
         return false;
     }
@@ -258,11 +264,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_LEFT,         KC_UP,          KC_DOWN,    KC_RGHT,    TD(TD_RECTANGLE),  MS_BTN3,   MS_WHLL,    MS_WHLU,    MS_WHLD,    MS_WHLR,
                                                          KC_TRNS,    KC_NO,             MS_BTN2,   MS_BTN1
         ),
-	[_MOUSE2] = LAYOUT(
-            KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
-            KC_LCTL, KC_LOPT, KC_LGUI, KC_LSFT, KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
-            KC_TRNS, MS_BTN4, MS_BTN2, MS_BTN1, KC_NO,      KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
-                                       KC_TRNS, KC_NO,      MS_BTN2, MS_BTN1
+        [_MOUSE2] = LAYOUT_split_3x6_3(
+            KC_DEL,  KC_NO,    KC_F2,    KC_F12,   KC_F11,         KC_NO,     KC_NO,    KC_NO,    KC_NO,    KC_NO,
+            KC_LCTL, KC_LOPT,  KC_NO,    KC_NO,    KC_PSCR,        KC_NO,     KC_NO,    KC_NO,    KC_NO,    KC_NO,
+            KC_TRNS, KC_BTN6,  KC_BTN2,  KC_BTN1,  KC_NO,          KC_NO,     KC_NO,    KC_NO,    KC_NO,    KC_NO,
+                                      KC_TRNS, KC_TRNS,    KC_NO,         KC_BTN2,   KC_BTN1, KC_NO
         ),
 	[_NAV] = LAYOUT(
         LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), LCTL(KC_Y),      KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,
