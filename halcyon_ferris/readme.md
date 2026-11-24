@@ -30,11 +30,24 @@ Flash: double-tap reset, copy the `.uf2` to the `RPI-RP2` drive (left file on th
 
 ## Display (right)
 
-- Top: layer name, colour coded.
-- Middle: **Shweep the sheep** 🐑. It chews on every key press or encoder turn (from both halves),
-  chews faster as you type faster, blinks now and then, and falls asleep (zZz) after 30 s idle.
-  The pixel art and its colours live in `sheep.h` as editable ASCII; timings are at the top of `display.c`.
-- Below the sheep: typing speed (hidden at 0 WPM).
-- Bottom: active modifiers (C A G S).
+The layer name (colour coded) on top, then **Shweep the sheep** 🐑 in a meadow under drifting clouds.
+It chews on every key press or encoder turn (from both halves), blinks now and then,
+and falls asleep (zZz) after 30 s idle.
 
-Both halves must be flashed after a change to the split sync settings (activity, WPM) in `config.h`.
+Modifiers dress it up, and they stack:
+
+| Mod   | Costume |
+|-------|---------|
+| ALT   | turns into a chicken (the alternative pet) |
+| SHIFT | extra long legs, shifted up into the clouds |
+| GUI   | Super(man) suit: blue body, red cape, "S" shield |
+| CTRL  | police hat (police control!) |
+
+<img src="../images/halcyon_pets.png" alt="Shweep the sheep in each state and costume" />
+
+_Left to right: idle, chewing, asleep, `CTRL`, `GUI`, `SHIFT`, `ALT`, and `ALT + GUI + CTRL + SHIFT`._
+
+The pixel art lives in `pets.h` as editable ASCII (one character per pixel, palette documented there);
+timings are at the top of `display.c`.
+
+Both halves must be flashed after a change to the split sync settings in `config.h`.

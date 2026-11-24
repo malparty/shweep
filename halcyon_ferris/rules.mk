@@ -8,7 +8,6 @@ ENCODER_MAP_ENABLE = yes
 
 INTROSPECTION_KEYMAP_C += features/combo.c # Replace SRC, see issue #21137
 SRC += display.c
-WPM_ENABLE = yes # typing speed for the display sheep
 
 REPEAT_KEY_ENABLE = yes
 

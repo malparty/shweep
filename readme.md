@@ -119,3 +119,32 @@ It needs splitkb's Halcyon module code in `qmk_firmware/users/halcyon_modules` (
 ```shell
 ln -s ../../../aurora/sweep/keymaps/shweep/halcyon_ferris qmk_firmware/keyboards/splitkb/halcyon/ferris/keymaps/shweep
 ```
+
+### Add-ons
+
+**Rotary encoder (left half)**: volume on the base layer, scrolling on the mouse layers, page up/down on NAV,
+screen brightness on NUM and RGB brightness on the RGB layer. Pressing it mutes, middle-clicks, plays/pauses
+or switches the RGB effect depending on the layer. The full table is in the [Halcyon readme](halcyon_ferris/readme.md).
+
+**Shweep the sheep (display, right half)** 🐑: under the current layer name, a pixel-art sheep grazes in a meadow
+under drifting clouds. It chews on every key press (from both halves), blinks now and then, and falls asleep (zZz)
+after 30 seconds without typing.
+
+The modifiers dress it up, and they stack:
+
+| Modifier | Costume |
+|----------|---------|
+| `ALT`    | 🐔 turns into a chicken (the _alternative_ pet) |
+| `SHIFT`  | 🦒 extra long legs, _shifted_ up into the clouds |
+| `GUI`    | 🦸 _Super_(man) suit: blue body, red cape and "S" shield |
+| `CTRL`   | 👮 police hat (police _control_!) |
+
+So `ALT + GUI + CTRL + SHIFT` gives a super-cop chicken on stilts. It's also a handy way to notice a home-row mod
+held by mistake.
+
+<img src="images/halcyon_pets.png" alt="Shweep the sheep: plain, chewing, asleep, police hat, Super suit, long legs, chicken, and super-cop chicken on stilts" />
+
+_Left to right: idle, chewing, asleep, `CTRL`, `GUI`, `SHIFT`, `ALT`, and `ALT + GUI + CTRL + SHIFT`._
+
+The pixel art is plain ASCII in [`halcyon_ferris/pets.h`](halcyon_ferris/pets.h) (one character per pixel), so new
+costumes are easy to draw.
