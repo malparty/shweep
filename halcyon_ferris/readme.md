@@ -30,4 +30,11 @@ Flash: double-tap reset, copy the `.uf2` to the `RPI-RP2` drive (left file on th
 
 ## Display (right)
 
-Layer name (colour coded), caps lock state, and active modifiers (C A G S).
+- Top: layer name, colour coded.
+- Middle: **Shweep the sheep** 🐑. It chews on every key press or encoder turn (from both halves),
+  chews faster as you type faster, blinks now and then, and falls asleep (zZz) after 30 s idle.
+  The pixel art and its colours live in `sheep.h` as editable ASCII; timings are at the top of `display.c`.
+- Below the sheep: typing speed (hidden at 0 WPM).
+- Bottom: active modifiers (C A G S).
+
+Both halves must be flashed after a change to the split sync settings (activity, WPM) in `config.h`.

@@ -11,6 +11,10 @@
 /* Sync CAPS LOCK info to both halves (for LED effect + display) */
 #define SPLIT_LED_STATE_ENABLE
 
+/* Display sheep: chew on key presses from both halves, and show typing speed */
+#define SPLIT_ACTIVITY_ENABLE
+#define SPLIT_WPM_ENABLE
+
 /* Mouse */
 // The default is 100
 #define MOUSEKEY_WHEEL_INTERVAL 50
