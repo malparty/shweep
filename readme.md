@@ -108,3 +108,14 @@ Navigate into the keymap folder `keyboards/splitkb/aurora/sweep/keymaps/shweep`.
 
 Compile with `qmk compile -c -kb splitkb/aurora/sweep -km shweep`.
 Flash both sides with `qmk flash -c -kb splitkb/aurora/sweep -km shweep`.
+
+## Halcyon Ferris
+
+The same layout also runs on a [Halcyon Ferris](https://splitkb.com) (left: rotary encoder module, right: TFT display module).
+Its code lives in [`halcyon_ferris/`](halcyon_ferris/), see its [readme](halcyon_ferris/readme.md) for the encoder mapping and the build commands.
+
+It needs splitkb's Halcyon module code in `qmk_firmware/users/halcyon_modules` (from the `halcyon-qmk` branch of [splitkb/qmk_userspace](https://github.com/splitkb/qmk_userspace)), then link the folder as a Ferris keymap:
+
+```shell
+ln -s ../../../aurora/sweep/keymaps/shweep/halcyon_ferris qmk_firmware/keyboards/splitkb/halcyon/ferris/keymaps/shweep
+```
