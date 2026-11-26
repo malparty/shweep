@@ -25,5 +25,16 @@
 #define TAPPING_TERM_PER_KEY
 #define QUICK_TAP_TERM 0
 
+/* Home row mods: fewer accidental mods (= "eaten" letters) on fast rolls.
+ * Flow Tap: a home-row key pressed < FLOW_TAP_TERM ms after the previous
+ *   letter is always a tap, so mid-word rolls never become a mod.
+ * Chordal Hold: a home-row key followed by a key on the SAME hand is a tap
+ *   (mods are for the other hand); thumbs are exempt, see chordal_hold_layout.
+ * Permissive Hold: opposite-hand nested press (mod down, key down+up, mod up)
+ *   is a hold right away, without waiting out TAPPING_TERM. */
+#define FLOW_TAP_TERM 150
+#define CHORDAL_HOLD
+#define PERMISSIVE_HOLD
+
 /* Halcyon encoder module */
 #define ENCODER_RESOLUTION 2
